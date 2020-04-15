@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fz9-mj-AUy">
+                                <rect key="frame" x="-43" y="198" width="500" height="500"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-fU-0yQ" userLabel="Button Stack View">
+                                <rect key="frame" x="124" y="758" width="166" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7d-jm-5JI" customClass="StartButton" customModule="Clock" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1n-wi-din"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owD-aX-cSC" customClass="StopButton" customModule="Clock" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="0.0" width="66" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MRn-jr-foP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fz9-mj-AUy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4W7-ec-irc"/>
+                            <constraint firstItem="JcZ-fU-0yQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O5B-jV-9Nd"/>
+                            <constraint firstItem="Fz9-mj-AUy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RfO-v0-3VG"/>
+                            <constraint firstItem="JcZ-fU-0yQ" firstAttribute="top" secondItem="Fz9-mj-AUy" secondAttribute="bottom" constant="60" id="mUz-KZ-V0g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="clock" destination="Fz9-mj-AUy" id="kOA-FI-2Zf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.61607142857142" y="137.68115942028987"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="12.png" width="250" height="250"/>
+    </resources>
+</document>
